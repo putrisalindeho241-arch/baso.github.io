@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Saya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakso Barokah - Kenikmatan Hakiki</title>
+    <style>
+        /* Gaya dasar untuk mempercantik tampilan */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #d32f2f; /* Warna merah bakso */
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .price {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #b71c1c;
+        }
+    </style>
 </head>
 <body>
-    <h1>Halo Dunia!</h1>
-    <p>Ini adalah website pertama saya di GitHub Pages.</p>
+
+<header>
+    <h1>🍲 Bakso Barokah</h1>
+    <p>Bakso Sapi Asli dengan Kuah Kaldu Spesial</p>
+</header>
+
+<div class="container">
+    <h2>Menu Andalan</h2>
+    
+    <div class="menu-item">
+        <span>Bakso Urat Jumbo</span>
+        <span class="price">Rp 25.000</span>
+    </div>
+    
+    <div class="menu-item">
+        <span>Bakso Telur Puyuh</span>
+        <span class="price">Rp 20.000</span>
+    </div>
+    
+    <div class="menu-item">
+        <span>Bakso Halus Kecil (Isi 10)</span>
+        <span class="price">Rp 18.000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Mie Ayam Bakso</span>
+        <span class="price">Rp 22.000</span>
+    </div>
+
+    <hr>
+
+    <h3>Tentang Kami</h3>
+    <p>Kami menggunakan daging sapi segar pilihan yang diolah setiap hari tanpa bahan pengawet. Resep kuah kaldu kami telah turun-temurun sejak tahun 1990!</p>
+    
+    <center>
+        <a href="https://wa.me/628123456789" class="btn">Pesan via WhatsApp</a>
+    </center>
+</div>
+
+<footer>
+    &copy; 2026 Bakso Barokah Online - Dibuat dengan GitHub Pages
+</footer>
+
 </body>
 </html>
