@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakso Barokah - Kenikmatan Hakiki di Bitung</title>
+    <title>Bakso Barokah Bitung - Premium & Halal</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,10 +13,7 @@
             --light: #fdfdfd;
         }
 
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -26,9 +23,8 @@
             color: var(--dark);
         }
 
-        /* Navigation */
         nav {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: white;
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -47,27 +43,15 @@
             font-weight: bold;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-        }
-
+        nav ul { list-style: none; display: flex; margin: 0; }
         nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover { color: var(--primary); }
-
-        /* Hero Section (HOME) */
+        /* HERO SECTION */
         #home {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://share.google/images/1WTHOSy1BVXuezRwL');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1547928576-a4a33237bec3?q=80&w=1600&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -82,117 +66,43 @@
         #home h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(3rem, 10vw, 5rem);
-            margin-bottom: 10px;
             color: var(--secondary);
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
         }
 
-        /* General Section Style */
         section { padding: 100px 10%; }
+        h2 { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); margin-bottom: 40px; }
 
-        h2 {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 40px;
-        }
-
-        /* About Section */
-        #about {
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
+        /* ABOUT */
+        #about { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; background: #fff; }
         .about-content { flex: 1; min-width: 300px; }
-
-        .about-img {
-            flex: 1;
-            min-width: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 5px solid var(--secondary);
+        .about-img { 
+            flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 5px solid var(--secondary);
         }
+        .about-img img { width: 100%; display: block; height: 400px; object-fit: cover; }
 
-        .about-img img { width: 100%; display: block; }
-
-        /* Menu Section */
+        /* MENU */
         #menu { background-color: #f9f9f9; }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .menu-card { 
+            background: white; border-radius: 15px; overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.4s; 
         }
-
-        .menu-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.4s;
-            border-bottom: 4px solid transparent;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--primary);
-        }
-
-        .menu-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
+        .menu-card:hover { transform: translateY(-10px); }
+        .menu-card img { width: 100%; height: 250px; object-fit: cover; }
         .menu-info { padding: 25px; text-align: center; }
+        .menu-info h3 { margin: 0; color: var(--primary); }
+        .price { color: var(--dark); font-weight: 700; font-size: 1.3rem; margin-top: 10px; }
 
-        .menu-info h3 { margin: 0; color: var(--primary); font-size: 1.4rem; }
-
-        .menu-info p {
-            color: var(--dark);
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-top: 10px;
-        }
-
-        /* Location & Contact */
-        .info-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .info-box {
-            background: var(--primary);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .info-box h3 { border-bottom: 2px solid var(--secondary); padding-bottom: 10px; margin-bottom: 20px; }
-
+        /* CONTACT & LOCATION */
+        .info-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .info-box { background: var(--primary); color: white; padding: 40px; border-radius: 20px; }
         .info-box a { color: var(--secondary); text-decoration: none; font-weight: bold; }
 
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 40px;
-            margin-top: 50px;
-        }
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px; }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            #home h1 { font-size: 3rem; }
-            section { padding: 60px 5%; }
-            nav ul { display: none; }
-        }
+        @media (max-width: 768px) { nav ul { display: none; } }
     </style>
 </head>
 <body>
@@ -203,54 +113,53 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#location">Contact & Location</a></li>
+            <li><a href="#location">Contact</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <h1>Bakso Barokah</h1>
-        <p style="font-size: 1.2rem; max-width: 600px;">Menyajikan cita rasa bakso sapi asli yang legendaris di Kota Bitung. Gurih kental kuahnya, mantap baksonya!</p>
-        <a href="#menu" style="background: var(--secondary); color: var(--dark); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">PESAN SEKARANG</a>
+        <p>Cita Rasa Bakso Sapi Asli di Kota Bitung</p>
+        <a href="#menu" style="background: var(--secondary); color: var(--dark); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 25px;">LIHAT MENU</a>
     </section>
 
     <section id="about">
         <div class="about-img">
-            <img src="https://share.google/images/urV6yEEzGJ9FbO9W5" alt="Proses Pembuatan Bakso">
+            <img src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?q=80&w=800&auto=format&fit=crop" alt="Bahan Bakso">
         </div>
         <div class="about-content">
-            <h2>Tentang Bakso Barokah</h2>
-            <p>Berawal dari keinginan menyajikan hidangan yang halal, sehat, dan nikmat, **Bakso Barokah Bitung** kini menjadi tujuan utama para pecinta kuliner di Sulawesi Utara.</p>
-            <p>Kami sangat menjaga kualitas dengan menggunakan:</p>
-            <ul style="padding-left: 20px;">
-                <li><strong>Daging Sapi Pilihan:</strong> Hanya menggunakan daging sapi segar setiap harinya.</li>
-                <li><strong>Tanpa Pengawet:</strong> Komitmen kami menyajikan bakso murni tanpa boraks.</li>
-                <li><strong>Bumbu Rempah Nusantara:</strong> Kuah gurih yang dihasilkan dari rebusan sumsum tulang sapi dan rempah pilihan.</li>
+            <h2>Kualitas Terjamin</h2>
+            <p>Kami di **Bakso Barokah Bitung** hanya menggunakan daging sapi segar pilihan tanpa bahan pengawet. Setiap butir bakso dibuat dengan resep rahasia keluarga yang menghasilkan tekstur kenyal dan rasa gurih alami.</p>
+            <ul>
+                <li>Daging Sapi Paha Belakang</li>
+                <li>Rempah Alami Nusantara</li>
+                <li>Kuah Sumsum Sapi 12 Jam</li>
             </ul>
         </div>
     </section>
 
     <section id="menu">
-        <h2>Daftar Menu Kami</h2>
+        <h2>Menu Favorit</h2>
         <div class="menu-grid">
             <div class="menu-card">
-                <img src="https://share.google/images/jLiz1iXHxc1OGExdm" alt="Bakso Urat Spesial">
+                <img src="https://images.unsplash.com/photo-1582610116397-edb318620fba?q=80&w=600&auto=format&fit=crop" alt="Bakso Urat">
                 <div class="menu-info">
-                    <h3>Bakso Urat Spesial</h3>
-                    <p>Rp 25.000</p>
+                    <h3>Bakso Urat Jumbo</h3>
+                    <p class="price">Rp 30.000</p>
                 </div>
             </div>
             <div class="menu-card">
-                <img src="https://share.google/images/7kMIp4Gf9al5oJFY4" alt="Bakso Telur Barokah">
+                <img src="https://images.unsplash.com/photo-1629115913089-75544d60d72f?q=80&w=600&auto=format&fit=crop" alt="Bakso Telur">
                 <div class="menu-info">
-                    <h3>Bakso Telur Barokah</h3>
-                    <p>Rp 22.000</p>
+                    <h3>Bakso Telur Spesial</h3>
+                    <p class="price">Rp 25.000</p>
                 </div>
             </div>
             <div class="menu-card">
-                <img src="https://share.google/images/IvZaxreYJjBS9buU0" alt="Bakso Komplit">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=600&auto=format&fit=crop" alt="Bakso Campur">
                 <div class="menu-info">
-                    <h3>Bakso Komplit Campur</h3>
-                    <p>Rp 28.000</p>
+                    <h3>Bakso Campur Komplit</h3>
+                    <p class="price">Rp 20.000</p>
                 </div>
             </div>
         </div>
@@ -259,30 +168,19 @@
     <section id="location">
         <div class="info-container">
             <div class="info-box">
-                <h3>📍 Lokasi Kami</h3>
-                <p>Kami hadir lebih dekat dengan Anda di:</p>
-                <p><strong>Jl. Raya Bitung, Kota Bitung</strong><br>
-                Sulawesi Utara, Indonesia (Samping Bank SulutGo)</p>
-                <div style="margin-top: 20px; background: rgba(255,255,255,0.2); height: 180px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-style: italic;">
-                   [ Peta Lokasi Bitung Sulawesi Utara ]
-                </div>
+                <h3>📍 Lokasi Bitung</h3>
+                <p>Jl. Sam Ratulangi, Bitung Tengah, Kota Bitung, Sulawesi Utara (Samping Bank SulutGo)</p>
             </div>
-
             <div class="info-box" style="background: var(--secondary); color: var(--dark);">
                 <h3>📞 Hubungi Kami</h3>
-                <p>Kami melayani pesanan untuk acara pesta, arisan, atau antar langsung ke rumah Anda.</p>
-                <p><strong>WhatsApp:</strong><br>
-                <a href="https://wa.me/6281234567890" style="color: #b71c1c; font-size: 1.5rem;">0812-3456-7890</a></p>
-                <p><strong>Email:</strong><br>
-                <a href="mailto:info@baksobarokahbitung.com" style="color: #b71c1c;">info@baksobarokahbitung.com</a></p>
-                <p style="margin-top: 15px; font-weight: bold;">Jam Operasional:<br>Setiap Hari: 10.00 - 21.00 WITA</p>
+                <p>WhatsApp: <a href="https://wa.me/6281244556677" style="color: var(--primary);">0812-4455-6677</a></p>
+                <p>Email: <a href="mailto:admin@baksobarokah.com" style="color: var(--primary);">admin@baksobarokah.com</a></p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Bakso Barokah Bitung. Kelezatan yang Memberi Berkah.</p>
-        <p style="font-size: 0.8rem; opacity: 0.6;">Dibuat dengan ❤️ di Bitung, Sulawesi Utara</p>
+        <p>&copy; 2026 Bakso Barokah Bitung. Kelezatan Sapi Asli.</p>
     </footer>
 
 </body>
